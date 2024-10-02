@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Custom Fonts (remove unneeded families if unused) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+
+    <!-- Remixicon Icons (keep if used) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+        integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+
+    <!-- Lightbox CSS and JS (keep if using lightbox functionality) -->
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
+
+    <!-- Animate.css (keep if using animations) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+
+    <!-- Particles.js (keep if used for particle effects) -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.jpeg" sizes="64x64">
+    <link rel="icon" href="images/logo-128x128.png" sizes="128x128">
+    <link rel="icon" href="images/logo-256x256.png" sizes="256x256">
+
+    <title>Logo Lab Technology</title>
+</head>
+
+<body>
+
+    <!-- <div class="custom-cursor" id="cursor"></div> -->
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #002142;">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/logo.jpeg" alt="Logo" class="logo-img me-2">
+            </a>
+
+            <!-- Book Now Button and Toggler for Small Screens -->
+            <div class="d-flex align-items-center d-lg-none">
+                <a href="#contact" class="btn btn-primary me-2">Book Logo</a>
+                <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="ri-menu-line" style="font-size: 30px; color: white;"></i> <!-- Remix Icon class -->
+                </button>
+            </div>
+
+            <!-- Navbar Items -->
+            <div class="navbar-collapse collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold mx-3" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold mx-3" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold mx-3" href="#service">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold mx-3" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold mx-3" href="#contact">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Book Now Button for Large Screens -->
+                <div class="d-none d-lg-block">
+                    <a href="#contact" class="btn btn-primary enhanced-btn">Book Logo</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="banner text-center text-white py-5" id="home">
+        <div id="particles-js"></div>
+        <div class="container banner-content">
+            <h1 class="display-2 mb-3 text-uppercase" id="logoHeading">Logo Lab Technology</h1>
+            <p class="fs-4 mt-3 mb-4 text-uppercase" id="tagline">"Your Vision, Our Innovation."</p>
+
+            <a href="#contact" class="btn btn-primary btn-lg fs-4 px-4 py-2">Book Your Logo</a>
+            <canvas id="bannerCanvas"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></canvas>
+        </div>
+    </div>
+
+
+    <div class="about-us py-5" id="about" style="background-color: #002142;">
+        <div class="container my-5">
+            <h2 class="display-6 fw-bold text-center my-4" style="color: #F3CC30;">ABOUT US</h2>
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                    <div class="image-container">
+                        <canvas id="3dCanvas" style="width: 100%; height: 400px;"></canvas>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="fs-4" style="color: #ffffff; line-height: 1.5;">
+                        At Logo Lab Technology, founded by Pakhre Roshan and Patil Raghu, we specialize in helping
+                        businesses differentiate themselves with innovative design and branding strategies that resonate
+                        with their audiences.
+                        Our team is dedicated to creating visually stunning logos, marketing materials, and
+                        comprehensive branding solutions tailored to each client.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Section -->
+    <div class="container-fluid py-5" style="background-color: #002142; color: #F3CC30;" id="service">
+        <div class="container">
+            <h2 class="display-6 fw-bold text-center mb-4">Our Services</h2>
+            <div class="row g-4">
+                <!-- Essential Logo -->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
+                    <div class="card border-0 bg-dark text-light shadow-lg rounded-3 overflow-hidden">
+                        <a href="images/Basic.webp" data-lightbox="gallery" data-title="Essential Logo - ₹800">
+                            <img src="images/Basic.webp" class="card-img-top" loading=" lazy" alt="Essential Logo">
+                        </a>
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-warning fs-4">Essential Logo</h5>
+                            <p class="card-text">A basic logo designed to get you started.</p>
+                            <p class="card-price fw-bold mb-3 fs-5">₹800</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intermediate Logo -->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
+                    <div class="card border-0 bg-dark text-light shadow-lg rounded-3 overflow-hidden">
+                        <a href="images/Intermediate.webp" data-lightbox="gallery"
+                            data-title="Intermediate Logo - ₹1200">
+                            <img src="images/Intermediate.webp" class="card-img-top" loading=" lazy"
+                                alt="Intermediate Logo">
+                        </a>
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-warning fs-4">Intermediate Logo</h5>
+                            <p class="card-text">A more refined logo with additional features.</p>
+                            <p class="card-price fw-bold mb-3 fs-5">₹1200</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advanced Logo -->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
+                    <div class="card border-0 bg-dark text-light shadow-lg rounded-3 overflow-hidden">
+                        <a href="images/Media Collection Logo.png" data-lightbox="gallery"
+                            data-title="Advanced Logo - ₹1800">
+                            <img src="images/Media Collection Logo.png" class="card-img-top" loading=" lazy"
+                                alt="Advanced Logo" style="width: 100%; height: 300px;">
+                        </a>
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-warning fs-4">Advanced Logo</h5>
+                            <p class="card-text">A premium logo with intricate details and revisions.</p>
+                            <p class="card-price fw-bold mb-3 fs-5">₹1800</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Package -->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
+                    <div class="card border-0 bg-dark text-light shadow-lg rounded-3 overflow-hidden">
+                        <a href="images/combo.jpeg" data-lightbox="gallery" data-title="Professional Package - ₹4000">
+                            <img src="images/combo.jpeg" class="card-img-top" loading=" lazy"
+                                alt="Professional Package">
+                        </a>
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-warning fs-4">Professional Package</h5>
+                            <p class="card-text">Includes one logo and one visiting card with two samples.</p>
+                            <p class="card-price fw-bold mb-3 fs-5">₹4000</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery" id="gallery" style="background-color: #002142; padding: 40px 0;">
+        <div class="container">
+            <h2 class="display-6 fw-bold text-center mb-4" style="color: #F3CC30;">GALLERY</h2>
+            <div class="port-name row">
+                <div class="col-12 m-auto m-sm-1 ms-sm-5 m-md-1 col-sm-10 col-md-12 col-lg-12">
+                    <ul class="nav nav-tabs justify-content-center mb-4 custom-tabs"
+                        style="background-color: #002142; border-radius: 5px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#all">
+                                <i class="ri ri-home-4-fill"></i> ALL
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Essential">
+                                <i class="ri ri-star-fill"></i> ESSENTIAL
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Intermediate">
+                                <i class="ri ri-star-half-fill"></i> INTERMEDIATE
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Advance">
+                                <i class="ri ri-star-fill"></i> ADVANCE
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#Professional">
+                                <i class="ri ri-trophy-fill"></i> PROFESSIONAL
+                            </a>
+                        </li>
+                    </ul>
+
+
+                </div>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="all">
+                        <div class="nav-image row">
+                            <div class="nav-image row">
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/tech solution logo.jpeg" class="card-img-top" loading="lazy"
+                                            alt="Intermediate"
+                                            style="background-color: white; width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/tech solution building.jpeg" class="card-img-top"
+                                            loading="lazy" alt="Intermediate" style="width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/tech solution card.jpeg" class="card-img-top" loading="lazy"
+                                            alt="Intermediate" style="width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/Chaitali tailor.png" class="card-img-top" loading="lazy"
+                                            alt="Intermediate"
+                                            style="width: 100%; height: 100%; background-color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/Chaitali-tailor-buiding.png" class="card-img-top"
+                                            loading="lazy" alt="Intermediate"
+                                            style="background-color: white; width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/tailor card.png" class="card-img-top" loading="lazy"
+                                            alt="Intermediate" style="width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/Dhruva real estate.png" class="card-img-top" loading="lazy"
+                                            alt="Intermediate"
+                                            style="width: 100%; height: 100%; background-color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/builder.jpg" class="card-img-top" loading="lazy"
+                                            alt="Intermediate"
+                                            style=" background-color: white; width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/Real Estate visiting card.png" class="card-img-top"
+                                            loading="lazy" alt="Intermediate" style="width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/clothing logo.jpeg" class="card-img-top" loading="lazy"
+                                            alt="Intermediate"
+                                            style="width: 100%; height: 100%; background-color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/cloting.png" class="card-img-top" loading="lazy"
+                                            alt="Intermediate"
+                                            style="background-color: white; width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/vastra veda clothing.jpg" class="card-img-top" loading="lazy"
+                                            alt="Intermediate" style="width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Intermediate logos -->
+                            <div class="nav-image row">
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/Library.png" class="card-img-top" loading="lazy"
+                                            alt="Intermediate"
+                                            style="background-color: white; width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/library 3D logo.jpg" class="card-img-top" loading="lazy"
+                                            alt="Intermediate" style="width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/library card.jpg" class="card-img-top" loading="lazy"
+                                            alt="Intermediate" style="width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/prot malani (intermediate).jpeg" class="card-img-top"
+                                            loading="lazy" alt="Intermediate"
+                                            style="width: 100%; height: 100%; background-color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/Prot-malani(2)building.jpg" class="card-img-top" loading="lazy"
+                                            alt="Intermediate"
+                                            style="background-color: white; width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/Prot malani(2).jpg" class="card-img-top" loading="lazy"
+                                            alt="Intermediate" style="width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/beauty logo.jpeg" class="card-img-top" loading="lazy"
+                                            alt="Intermediate"
+                                            style="width: 100%; height: 100%; background-color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/beauty blush makeup.jpg" class="card-img-top" loading="lazy"
+                                            alt="Intermediate"
+                                            style=" background-color: white; width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/beauty blush makeup building.jpg" class="card-img-top"
+                                            loading="lazy" alt="Intermediate" style="width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/Rudra martial arts.png" class="card-img-top" loading="lazy"
+                                            alt="Intermediate"
+                                            style="width: 100%; height: 100%; background-color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/Rudra (Martial Arts).jpg" class="card-img-top" loading="lazy"
+                                            alt="Intermediate"
+                                            style="background-color: white; width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/marshal art card.png" class="card-img-top" loading="lazy"
+                                            alt="Intermediate" style="width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Advance logo -->
+                            <div class="nav-image row">
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/Furniture Logo_.png" class="card-img-top" loading="lazy"
+                                            alt="Intermediate"
+                                            style="background-color: white; width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/furniture wall mockup.jpg" class="card-img-top" loading="lazy"
+                                            alt="Intermediate" style="width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/Furnitute-Visiting-Mockup.jpg" class="card-img-top"
+                                            loading="lazy" alt="Intermediate" style="width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/Music.png" class="card-img-top" loading="lazy"
+                                            alt="Intermediate"
+                                            style="width: 100%; height: 100%; background-color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/Music-Mockup.jpg" class="card-img-top" loading="lazy"
+                                            alt="Intermediate"
+                                            style=" background-color: #f5f5f5; width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/Music-visiting-Mockup.jpg" class="card-img-top" loading="lazy"
+                                            alt="Intermediate" style="width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/Mens Fashion Logo Design.png" class="card-img-top"
+                                            loading="lazy" alt="Intermediate"
+                                            style="width: 100%; height: 100%; background-color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/mens-shop-mockup.jpg" class="card-img-top" loading="lazy"
+                                            alt="Intermediate"
+                                            style="background-color: white; width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/Mens-Wear-mockup.jpg" class="card-img-top" loading="lazy"
+                                            alt="Intermediate" style="width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/Media Collection Logo.png" class="card-img-top" loading="lazy"
+                                            alt="Intermediate"
+                                            style="width: 100%; height: 100%; background-color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/media-tshiet.jpg" class="card-img-top" loading="lazy"
+                                            alt="Intermediate"
+                                            style="background-color: white; width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/Media-Visiting-mockup.jpg" class="card-img-top" loading="lazy"
+                                            alt="Intermediate" style="width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- professional logo -->
+                            <div class="nav-image row">
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/professinal(3d).webp" class="card-img-top" loading="lazy"
+                                            alt="Intermediate"
+                                            style="background-color: white; width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/amreli tech logo.jpg" class="card-img-top" loading="lazy"
+                                            alt="Intermediate" style="width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/professional6.webp" class="card-img-top" loading="lazy"
+                                            alt="Intermediate" style="width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                    <div class="card" style="width: 100%; height: 350px;">
+                                        <img src="images/professional4.webp" class="card-img-top" loading="lazy"
+                                            alt="Intermediate"
+                                            style="width: 100%; height: 100%; background-color: white;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade " id="Essential">
+                        <div class="nav-image row">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/tech solution logo.jpeg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="background-color: white; width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/tech solution building.jpeg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/tech solution card.jpeg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/Chaitali tailor.png" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%; background-color: white;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/Chaitali-tailor-buiding.png" class="card-img-top" loading="lazy"
+                                        alt="Intermediate"
+                                        style="background-color: white; width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/tailor card.png" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/Dhruva real estate.png" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%; background-color: white;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/builder.jpg" class="card-img-top" loading="lazy" alt="Intermediate"
+                                        style=" background-color: white; width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/Real Estate visiting card.png" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/clothing logo.jpeg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%; background-color: white;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/cloting.png" class="card-img-top" loading="lazy" alt="Intermediate"
+                                        style="background-color: white; width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/vastra veda clothing.jpg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade " id="Intermediate">
+                        <div class="nav-image row">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/Library.png" class="card-img-top" loading="lazy" alt="Intermediate"
+                                        style="background-color: white; width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/library 3D logo.jpg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/library card.jpg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/prot malani (intermediate).jpeg" class="card-img-top"
+                                        loading="lazy" alt="Intermediate"
+                                        style="width: 100%; height: 100%; background-color: white;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/Prot-malani(2)building.jpg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate"
+                                        style="background-color: white; width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/Prot malani(2).jpg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/beauty logo.jpeg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%; background-color: white;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/beauty blush makeup.jpg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style=" background-color: white; width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/beauty blush makeup building.jpg" class="card-img-top"
+                                        loading="lazy" alt="Intermediate" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/Rudra martial arts.png" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%; background-color: white;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/Rudra (Martial Arts).jpg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="background-color: white; width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/marshal art card.png" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade " id="Advance">
+                        <div class="nav-image row">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/Furniture Logo_.png" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="background-color: white; width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/furniture wall mockup.jpg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/Furnitute-Visiting-Mockup.jpg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/Music.png" class="card-img-top" loading="lazy" alt="Intermediate"
+                                        style="width: 100%; height: 100%; background-color: white;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/Music-Mockup.jpg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate"
+                                        style="background-color: #f5f5f5; width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/Music-visiting-Mockup.jpg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/Mens Fashion Logo Design.png" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style=" width: 100%; height: 100%; background-color: white;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/mens-shop-mockup.jpg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="background-color: white; width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/Mens-Wear-mockup.jpg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/Media Collection Logo.png" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%; background-color: white;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/media-tshiet.jpg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="background-color: white; width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/Media-Visiting-mockup.jpg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="tab-pane fade " id="Professional">
+                        <div class="nav-image row w-100">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/professinal(3d).webp" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="background-color: white; width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/amreli tech logo.jpg" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/professional6.webp" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+                                <div class="card" style="width: 100%; height: 350px;">
+                                    <img src="images/professional4.webp" class="card-img-top" loading="lazy"
+                                        alt="Intermediate" style="width: 100%; height: 100%; background-color: white;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact" id="contact" style="background-color: #002142; position: relative;">
+        <!-- Parallax Background -->
+        <div class="parallax-bg"
+            style="background-image: url('images/contact-bg.jpg'); position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.2; background-size: cover; z-index: 1;">
+        </div>
+
+        <div class="container py-5" style="position: relative; z-index: 2;">
+            <h2 class="display-6 fw-bold text-center text-uppercase" style="color: #F3CC30;">Contact Us</h2>
+            <div class="row justify-content-center g-4 mt-4">
+                <div class="col-lg-4 col-md-6 info p-4 text-white animate__animated animate__fadeInLeft">
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="ri ri-map-pin-2-fill fs-2 me-3 text-warning"></i>
+                        <div class="info-hover">
+                            <h4 class="fw-bold" style="color: #F3CC30;">Address</h4>
+                            <p class="mb-0 fs-5">SURAT, INDIA</p>
+                        </div>
+                    </div>
+                    <hr class="border-light">
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="ri ri-mail-fill fs-2 me-3 text-warning"></i>
+                        <div class="info-hover">
+                            <h4 class="fw-bold" style="color: #F3CC30;">Email</h4>
+                            <a href="mailto:logolabtechnology@gmail.com"
+                                class="text-white fs-5 text-decoration-none">logolabtechnology@gmail.com</a>
+                        </div>
+                    </div>
+                    <hr class="border-light">
+                    <div class="d-flex align-items-center mb-4" id="phone-container">
+                        <i class="ri ri-phone-fill fs-2 me-3 text-warning"></i>
+                        <div class="info-hover">
+                            <h4 class="fw-bold" style="color: #F3CC30;">Phone</h4>
+                        </div>
+                    </div>
+                    <hr class="border-light">
+                </div>
+
+                <div class="col-lg-7 col-md-6 animate__animated animate__fadeInRight">
+                    <div class="form bg-dark p-4 rounded-3 shadow-lg">
+                        <h4 class="text-center text-light mb-4">Get in Touch</h4>
+                        <form action="https://api.web3forms.com/submit" method="post" id="contact-form">
+                            <input type="hidden" name="access_key" value="759a646d-e8ba-45c2-8f0f-f9f1c9b70f9d">
+                            <div id="alert-success" class="alert alert-success d-none" role="alert">Your message has
+                                been sent successfully!</div>
+                            <div id="alert-danger" class="alert alert-danger d-none" role="alert">Something went wrong.
+                                Please try again.</div>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control input-hover" name="name"
+                                            placeholder="Name" required>
+                                        <span class="input-group-text bg-transparent text-warning"><i
+                                                class="ri ri-user-fill"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <input type="email" class="form-control input-hover" name="email"
+                                            placeholder="Email" required>
+                                        <span class="input-group-text bg-transparent text-warning"><i
+                                                class="ri ri-mail-fill"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <input type="tel" class="form-control input-hover" name="phone"
+                                            placeholder="Phone" required>
+                                        <span class="input-group-text bg-transparent text-warning"><i
+                                                class="ri ri-phone-fill"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <select class="form-select input-hover" name="service" id="service" required>
+                                            <option value="" selected disabled>Select Service</option>
+                                            <option value="Essential Logo">Essential Logo - 800 Rs</option>
+                                            <option value="Intermediate Logo">Intermediate Logo - 1200 Rs</option>
+                                            <option value="Advanced Logo">Advanced Logo - 1800 Rs</option>
+                                            <option value="Professional Combo">Professional Combo (Logo + Visiting Card)
+                                                - 4000 Rs</option>
+                                        </select>
+                                        <span class="input-group-text bg-transparent text-warning"><i
+                                                class="ri ri-edit-fill"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control input-hover" name="message" rows="5"
+                                        placeholder="Your Logo Requirement" required></textarea>
+                                </div>
+                                <p class="text-warning mb-3">Note: Currently available for India only.</p>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn w-100 py-2 submit-btn"
+                                        style="background-color: #F3CC30; color: #002142;">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid" id="footer" style="background-color: #000e1c;">
+            <div class="container py-5">
+                <div class="row justify-content-between align-items-start">
+                    <div class="col-12 col-md-4 mb-4 d-flex flex-column" id="sub-footer1">
+                        <h5 class="fw-bold mb-3" style="color: #F3CC30;">Address</h5>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="ri ri-map-pin-2-fill me-2 fs-5 text-primary"></i>
+                            <p class="mb-0 text-light">SURAT, INDIA</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="ri ri-mail-fill me-2 fs-5 text-primary"></i>
+                            <a href="mailto:logolabtechnology@gmail.com"
+                                class="text-decoration-none text-light">logolabtechnology@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 mb-4" id="sub-footer2">
+                        <h5 class="fw-bold mb-3">Pages</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">
+                                <a href="#home" class="text-decoration-none text-light d-flex align-items-center">
+                                    <i class="ri ri-arrow-right-line me-2" style="color: #F3CC30;"></i> Home
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#about" class="text-decoration-none text-light d-flex align-items-center">
+                                    <i class="ri ri-arrow-right-line me-2" style="color: #F3CC30;"></i> About Us
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#service" class="text-decoration-none text-light d-flex align-items-center">
+                                    <i class="ri ri-arrow-right-line me-2" style="color: #F3CC30;"></i> Service
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#gallery" class="text-decoration-none text-light d-flex align-items-center">
+                                    <i class="ri ri-arrow-right-line me-2" style="color: #F3CC30;"></i> Gallery
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#contact" class="text-decoration-none text-light d-flex align-items-center">
+                                    <i class="ri ri-arrow-right-line me-2" style="color: #F3CC30;"></i> Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-md-4 mb-4" id="sub-footer3">
+                        <div class="map-container mb-4">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119066.41709466476!2d72.73989531746376!3d21.15934029861164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1725808887297!5m2!1sen!2sin"
+                                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class="d-flex justify-content-start align-items-center">
+                            <a href="https://www.instagram.com/logo_lab_technology__/"
+                                class="social-icon d-flex align-items-center justify-content-center rounded-circle p-3 me-3"
+                                aria-label="Instagram">
+                                <i class="ri ri-instagram-fill fs-4"></i>
+                            </a>
+                            <a href="mailto:logolabtechnology@gmail.com"
+                                class="social-icon d-flex align-items-center justify-content-center rounded-circle p-3"
+                                aria-label="Email">
+                                <i class="ri ri-mail-fill fs-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container w-100 text-center">
+                    <p class="mb-0" style="color: #F3CC30;">&copy; <span id="year"></span> Logo lab Technology. All
+                        rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="three.js"></script>
+    <script>
+        $(window).on('load', () => {
+            setTimeout(() => {
+                $('#preloader').fadeOut('slow', () => $('#main-content').fadeIn('slow'));
+            }, 0);
+        });
+
+        var message = "function disabled";
+
+        function rtclickcheck(keyp) {
+            if (navigator.logolabtechnology == "Netscape" && keyp.which == 3) { alert(message); return false; }
+
+            if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; }
+        }
+
+        // document.onmousedown = rtclickcheck;
+
+        // document.addEventListener('contextmenu', e => e.preventDefault());
+
+        $(document).ready(() => {
+            $('.navbar-toggler').click(function () {
+                const isExpanded = $(this).attr('aria-expanded') === 'true';
+                $('#navbarNav').slideToggle();
+                $(this).attr('aria-expanded', !isExpanded);
+            });
+
+            $('#service').change(function () {
+                $('#comboMessage').toggleClass('d-none', this.value !== 'Professional Combo');
+            });
+
+            document.querySelectorAll('img').forEach(img => {
+                img.ondragstart = () => false;
+            });
+
+
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: 80, density: { enable: true, value_area: 800 } },
+                    color: { value: "#F3CC30" },
+                    shape: { type: "circle", stroke: { width: 0, color: "#F3CC30" } },
+                    opacity: { value: 1 },
+                    size: { value: 2, random: true },
+                    line_linked: { enable: true, distance: 150, color: "#F3CC30", opacity: 0.4, width: 1 },
+                    move: { enable: true, speed: 6 }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: { onclick: { enable: false, mode: "push" } }
+                },
+                retina_detect: true
+            });
+
+            $('#contact-form').submit(function (e) {
+                e.preventDefault();
+                fetch(this.action, { method: this.method, body: new FormData(this) })
+                    .then(response => {
+                        $('#alert-success').toggleClass('d-none', !response.ok);
+                        $('#alert-danger').toggleClass('d-none', response.ok);
+                        if (response.ok) this.reset();
+                    })
+                    .catch(() => {
+                        $('#alert-success').addClass('d-none');
+                        $('#alert-danger').removeClass('d-none');
+                    });
+            });
+
+            $('#year').text(new Date().getFullYear());
+
+            const phoneNumbers = [
+                { number: "+91 93165 49394", tel: "+919316549394" },
+                { number: "+91 99748 32889", tel: "+919974832889" }
+            ];
+
+            const phoneContainer = $('#phone-container .info-hover');
+            phoneNumbers.forEach(phone => {
+                phoneContainer.append(`<div><a href="tel:${phone.tel}" class="text-white fs-5 text-decoration-none">${phone.number}</a></div>`);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const logoHeading = document.getElementById("logoHeading");
+            const tagline = document.getElementById("tagline");
+
+            // Split words for logo heading
+            const logoWords = logoHeading.innerText.split(" ");
+            logoHeading.innerHTML = logoWords.map(word => `<span class="word">${word}</span>`).join(" ");
+
+            // Split words for tagline
+            const taglineWords = tagline.innerText.split(" ");
+            tagline.innerHTML = taglineWords.map(word => `<span class="word">${word}</span>`).join(" ");
+
+            // Animate words on load
+            const words = document.querySelectorAll('.word');
+            words.forEach((word, index) => {
+                setTimeout(() => {
+                    word.style.opacity = 1; // Fade in
+                    word.style.transform = 'translateY(0)'; // Move to original position
+                    word.style.animation = `fadeIn 0.5s ease forwards`;
+                }, index * 100); // Staggered effect
+            });
+        });
+
+    </script>
+</body>
+
+</html>
